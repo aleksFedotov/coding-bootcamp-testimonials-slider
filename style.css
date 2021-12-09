@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 3.2rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #202046;
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/pattern-bg.svg), url(./images/pattern-curve.svg), url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: 89% 13%, left bottom, 25% 30%;
+  padding: 0 2rem;
+  background-size: contain, initial, initial;
+}
+
+.slider-container {
+  max-width: 110rem;
+  width: 100%;
+  min-height: 54rem;
+  position: relative;
+}
+
+.tetimonial-container {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.tetimonial-container__text {
+  width: 60%;
+  margin-right: -3rem;
+  z-index: 1;
+}
+.tetimonial-container__text .text {
+  font-weight: 300;
+  margin-bottom: 5rem;
+}
+.tetimonial-container__text .name {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.tetimonial-container__text .ocupation {
+  font-weight: 500;
+  color: #babacf;
+}
+.tetimonial-container__img {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  border-radius: 0.8rem;
+  max-width: 54rem;
+  width: 100%;
+  min-height: 54rem;
+  box-shadow: 1px 2rem 2rem rgba(0, 0, 0, 0.15);
+  overflow: visible;
+}
+.tetimonial-container.active {
+  opacity: 1;
+}
+
+.tanya {
+  background-image: url(./images/image-tanya.jpg);
+}
+
+.john {
+  background-image: url(./images/image-john.jpg);
+}
+
+.slider-btn {
+  position: absolute;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 1px 2rem 2rem rgba(0, 0, 0, 0.15);
+  width: 11rem;
+  height: 5.6rem;
+  border-radius: 6rem;
+  bottom: 2.5rem;
+  right: 37rem;
+}
+
+.btn {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+@media only screen and (min-width: 1440px) {
+  .bg {
+    width: 144rem;
+    height: 80rem;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .bg {
+    background-position: 120% 14%, left bottom, 10% 30%;
+    background-size: auto;
+  }
+
+  .tetimonial-container__img {
+    top: -28%;
+  }
+  .tetimonial-container__text {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .bg {
+    background-position: 50% 10%, left bottom, 50% 80%;
+    background-size: 50rem, 30rem, 10rem;
+  }
+
+  .tetimonial-container {
+    flex-direction: column;
+    justify-content: initial;
+    gap: 7rem;
+    top: 55%;
+  }
+  .tetimonial-container__img {
+    position: static;
+    max-width: 35rem;
+    min-height: 35rem;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  .tetimonial-container__text {
+    text-align: center;
+    height: 50%;
+    width: 75%;
+    justify-self: flex-end;
+    order: 1;
+    margin-right: 0;
+    font-size: 2.5rem;
+  }
+  .tetimonial-container__text .text {
+    margin-bottom: 2.5rem;
+  }
+
+  .slider-btn {
+    top: 54%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .bg {
+    background-position: 50% 8%, left bottom, 50% 64%;
+    background-size: 32rem, 25rem, 6rem;
+  }
+
+  .tetimonial-container {
+    top: 50%;
+  }
+  .tetimonial-container__img {
+    max-width: 25rem;
+    min-height: 25rem;
+  }
+  .tetimonial-container__text {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .tetimonial-container .text {
+    margin-bottom: 1.5rem;
+  }
+  .tetimonial-container .name {
+    font-size: 1.5rem;
+  }
+  .tetimonial-container .ocupation {
+    display: block;
+  }
+
+  .slider-btn {
+    width: 8rem;
+    height: 4rem;
+    top: 43%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .btn img {
+    width: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
