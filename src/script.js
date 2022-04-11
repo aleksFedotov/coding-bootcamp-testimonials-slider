@@ -1,6 +1,7 @@
 const tetimonialContainers = document.querySelectorAll('.tetimonial-container');
 const prevBtn = document.querySelector('.btn--prev');
 const nextBtn = document.querySelector('.btn--next');
+import './style.scss';
 
 let currentSlide = 0;
 
